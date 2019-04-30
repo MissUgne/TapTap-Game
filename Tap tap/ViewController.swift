@@ -11,21 +11,27 @@ import UIKit
 class ViewController: UIViewController {
     
     //Properties
-    var maxTaps = 0
     var currentTaps = 0
+    var timer2: Timer?
+    var timeLeft = 30
     
     
     //Outlets
     @IBOutlet weak var logoImg: UIImageView!
-    @IBOutlet weak var howManyTapsTxt: UITextField!
     @IBOutlet weak var playBttn: UIButton!
+    @IBOutlet weak var restartBttn: UIButton!
     
     @IBOutlet weak var sunBttn: UIButton!
     @IBOutlet weak var tapsLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     //Actions
     func updateTapsLabel(){
         tapsLabel.text = "\(currentTaps) Taps"
+    }
+    
+    @IBAction func restartGameBttnPressed(){
+        restartGame()
     }
     
     
@@ -33,47 +39,66 @@ class ViewController: UIViewController {
         currentTaps = currentTaps + 1
         updateTapsLabel()
         
-        if isGameOver(){
-            restartGame()
-        }
-        
+    }
+    
+    func startTimer(){
+        timer2 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
     }
     
     @IBAction func playButtonPressed(sender: UIButton!){
+            startTimer()
         
-        if howManyTapsTxt.text != nil && howManyTapsTxt.text != "" {
-            
             logoImg.isHidden = true
-            howManyTapsTxt.isHidden = true
             playBttn.isHidden = true
+            restartBttn.isHidden = false
             
+            timerLabel.isHidden = false
             sunBttn.isHidden = false
             tapsLabel.isHidden = false
             
-            maxTaps = Int(howManyTapsTxt.text!)!
             currentTaps = 0
-            
             updateTapsLabel()
+    }
+    
+    @objc func onTimerFires()
+    {
+        timeLeft -= 1
+        timerLabel.text = "\(timeLeft) s"
+        
+        if timeLeft <= 0 {
+            timer2?.invalidate()
+            timer2 = nil
+            sunBttn.isHidden = true
+            tapsLabel.text = "Your score is \(currentTaps)!"
+            timerLabel.isHidden = true
         }
     }
-    func isGameOver() -> Bool {
+    
+    
+    /* func isGameOver() -> Bool {
         if currentTaps >= maxTaps {
             return true
         }else{
             return false
         }
-    }
+    }*/
 
+    func reset(){
+        timeLeft = 30
+        
+    }
     func restartGame() {
-        maxTaps = 0
-        howManyTapsTxt.text = ""
         
         logoImg.isHidden = false
-        howManyTapsTxt.isHidden = false
         playBttn.isHidden = false
         
+        restartBttn.isHidden = true
+        timerLabel.isHidden = true
         sunBttn.isHidden = true
         tapsLabel.isHidden = true
+        
+        timer2?.invalidate()
+        reset()
     }
 }
 

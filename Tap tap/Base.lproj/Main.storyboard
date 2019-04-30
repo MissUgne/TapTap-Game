@@ -29,7 +29,7 @@
                                 <rect key="frame" x="20" y="133" width="794" height="176"/>
                             </imageView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-PB-Iak" userLabel="sun_button">
-                                <rect key="frame" x="342" y="335" width="150" height="150"/>
+                                <rect key="frame" x="342" y="892" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="J40-O7-fcC"/>
                                     <constraint firstAttribute="height" constant="150" id="P7N-Op-GAu"/>
@@ -40,19 +40,10 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bP-xf-Kyy">
-                                <rect key="frame" x="336" y="133" width="162" height="47"/>
-                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <rect key="frame" x="333.5" y="220" width="167" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="0.98015426288751373" green="1" blue="0.9886077685744078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="How many taps?" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="red-m4-Gk0">
-                                <rect key="frame" x="336.5" y="395" width="161.5" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="mcc-6C-Ux0"/>
-                                </constraints>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-UL-nov" userLabel="play_button">
                                 <rect key="frame" x="289" y="925" width="256" height="167"/>
                                 <state key="normal" image="Play"/>
@@ -60,34 +51,50 @@
                                     <action selector="playButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUV-45-EWl"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYn-W5-e7h" userLabel="Timer_Label">
+                                <rect key="frame" x="389" y="40" width="56" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-m7-XDV" userLabel="Restart_button">
+                                <rect key="frame" x="330" y="761" width="174" height="53"/>
+                                <state key="normal" image="Restart"/>
+                                <connections>
+                                    <action selector="restartGameBttnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhO-mA-PGu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FLc-wX-dTB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3e3-7A-Obd"/>
+                            <constraint firstItem="IYn-W5-e7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ly-Hl-9LC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Rf2-UL-nov" secondAttribute="bottom" constant="20" id="7HR-BC-zin"/>
                             <constraint firstItem="HFe-uo-1xJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BTQ-2Y-GpX"/>
                             <constraint firstAttribute="trailing" secondItem="FLc-wX-dTB" secondAttribute="trailing" id="Dxm-94-keS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HFe-uo-1xJ" secondAttribute="trailing" constant="20" id="E3q-Bj-qIb"/>
                             <constraint firstItem="1bP-xf-Kyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHF-TC-fp1"/>
-                            <constraint firstItem="red-m4-Gk0" firstAttribute="top" secondItem="HFe-uo-1xJ" secondAttribute="bottom" constant="86" id="M8s-pm-a7F"/>
+                            <constraint firstItem="J0f-m7-XDV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MKI-8Q-wum"/>
                             <constraint firstItem="FLc-wX-dTB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMf-Zf-a6Z"/>
-                            <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="HFe-uo-1xJ" secondAttribute="bottom" constant="26" id="Ri4-Kd-nIe"/>
                             <constraint firstItem="1X0-PB-Iak" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yhb-mS-N0a"/>
-                            <constraint firstItem="red-m4-Gk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zmj-kv-7Ky"/>
-                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="dyB-qp-u6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1X0-PB-Iak" secondAttribute="bottom" constant="70" id="aAD-NI-YmT"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="dyB-qp-u6x"/>
+                            <constraint firstItem="IYn-W5-e7h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gcw-Z1-RyD"/>
                             <constraint firstItem="HFe-uo-1xJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="giq-zK-w35"/>
                             <constraint firstItem="HFe-uo-1xJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCj-qn-6Me"/>
                             <constraint firstItem="Rf2-UL-nov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nck-aP-2lu"/>
+                            <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="78" id="sRs-f0-TLk"/>
                             <constraint firstItem="FLc-wX-dTB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wV6-SZ-amk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="howManyTapsTxt" destination="red-m4-Gk0" id="6OA-7n-Wc2"/>
                         <outlet property="logoImg" destination="HFe-uo-1xJ" id="Bun-64-Zxg"/>
                         <outlet property="playBttn" destination="Rf2-UL-nov" id="bKA-3b-B6L"/>
+                        <outlet property="restartBttn" destination="J0f-m7-XDV" id="FwZ-Fs-MS0"/>
                         <outlet property="sunBttn" destination="1X0-PB-Iak" id="9yx-rR-tVl"/>
                         <outlet property="tapsLabel" destination="1bP-xf-Kyy" id="uzG-UY-0UM"/>
+                        <outlet property="timerLabel" destination="IYn-W5-e7h" id="Dxo-Mq-2y0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,6 +105,7 @@
     <resources>
         <image name="85134" width="5000" height="5001"/>
         <image name="Play" width="256" height="167"/>
+        <image name="Restart" width="174" height="53"/>
         <image name="Tap-Tap" width="437" height="176"/>
         <image name="sun" width="1252" height="1319"/>
     </resources>
