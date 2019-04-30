@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tap_tap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="85134" translatesAutoresizingMaskIntoConstraints="NO" id="FLc-wX-dTB">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1112" id="m7J-vs-bXs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="834" id="yiS-h0-Z56"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tap-Tap" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-uo-1xJ" userLabel="Logo">
+                                <rect key="frame" x="20" y="133" width="794" height="176"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-PB-Iak" userLabel="sun_button">
+                                <rect key="frame" x="342" y="335" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="J40-O7-fcC"/>
+                                    <constraint firstAttribute="height" constant="150" id="P7N-Op-GAu"/>
+                                </constraints>
+                                <state key="normal" image="sun"/>
+                                <connections>
+                                    <action selector="sunButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjG-dr-jIi"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bP-xf-Kyy">
+                                <rect key="frame" x="336" y="133" width="162" height="47"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <color key="textColor" red="0.98015426288751373" green="1" blue="0.9886077685744078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="How many taps?" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="red-m4-Gk0">
+                                <rect key="frame" x="336.5" y="395" width="161.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mcc-6C-Ux0"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-UL-nov" userLabel="play_button">
+                                <rect key="frame" x="289" y="925" width="256" height="167"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUV-45-EWl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FLc-wX-dTB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3e3-7A-Obd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Rf2-UL-nov" secondAttribute="bottom" constant="20" id="7HR-BC-zin"/>
+                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BTQ-2Y-GpX"/>
+                            <constraint firstAttribute="trailing" secondItem="FLc-wX-dTB" secondAttribute="trailing" id="Dxm-94-keS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HFe-uo-1xJ" secondAttribute="trailing" constant="20" id="E3q-Bj-qIb"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHF-TC-fp1"/>
+                            <constraint firstItem="red-m4-Gk0" firstAttribute="top" secondItem="HFe-uo-1xJ" secondAttribute="bottom" constant="86" id="M8s-pm-a7F"/>
+                            <constraint firstItem="FLc-wX-dTB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMf-Zf-a6Z"/>
+                            <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="HFe-uo-1xJ" secondAttribute="bottom" constant="26" id="Ri4-Kd-nIe"/>
+                            <constraint firstItem="1X0-PB-Iak" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yhb-mS-N0a"/>
+                            <constraint firstItem="red-m4-Gk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zmj-kv-7Ky"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="dyB-qp-u6x"/>
+                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="giq-zK-w35"/>
+                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCj-qn-6Me"/>
+                            <constraint firstItem="Rf2-UL-nov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nck-aP-2lu"/>
+                            <constraint firstItem="FLc-wX-dTB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wV6-SZ-amk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="red-m4-Gk0" id="6OA-7n-Wc2"/>
+                        <outlet property="logoImg" destination="HFe-uo-1xJ" id="Bun-64-Zxg"/>
+                        <outlet property="playBttn" destination="Rf2-UL-nov" id="bKA-3b-B6L"/>
+                        <outlet property="sunBttn" destination="1X0-PB-Iak" id="9yx-rR-tVl"/>
+                        <outlet property="tapsLabel" destination="1bP-xf-Kyy" id="uzG-UY-0UM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.043165467625904" y="19.964028776978417"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="85134" width="5000" height="5001"/>
+        <image name="Play" width="256" height="167"/>
+        <image name="Tap-Tap" width="437" height="176"/>
+        <image name="sun" width="1252" height="1319"/>
+    </resources>
+</document>
