@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Restart.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "restart_bttn2.png",
       "scale" : "2x"
     },
     {

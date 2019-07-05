@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Play.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "play_bttn2.png",
       "scale" : "2x"
     },
     {
@@ -17,8 +17,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "auto-scaling" : "auto"
   }
 }

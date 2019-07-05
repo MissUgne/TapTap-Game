@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D107EB7022C7F9CA00770585 /* highScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D107EB6F22C7F9C900770585 /* highScoreView.swift */; };
+		D157F7A7227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
+		D157F7A8227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
+		D157F7A9227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
 		D19C062F225E9EF200A3E0AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C062E225E9EF200A3E0AC /* AppDelegate.swift */; };
 		D19C0631225E9EF200A3E0AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C0630225E9EF200A3E0AC /* ViewController.swift */; };
 		D19C0634225E9EF200A3E0AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19C0632225E9EF200A3E0AC /* Main.storyboard */; };
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D107EB6F22C7F9C900770585 /* highScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highScoreView.swift; sourceTree = "<group>"; };
+		D157F7A6227A765900D8E59E /* tap_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tap_icon.png; path = ../../../../tap_icon.png; sourceTree = "<group>"; };
 		D19C062B225E9EF100A3E0AC /* Tap tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C062E225E9EF200A3E0AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19C0630225E9EF200A3E0AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 			children = (
 				D19C062E225E9EF200A3E0AC /* AppDelegate.swift */,
 				D19C0630225E9EF200A3E0AC /* ViewController.swift */,
+				D107EB6F22C7F9C900770585 /* highScoreView.swift */,
 				D19C0632225E9EF200A3E0AC /* Main.storyboard */,
 				D19C0635225E9EFE00A3E0AC /* Assets.xcassets */,
 				D19C0637225E9EFE00A3E0AC /* LaunchScreen.storyboard */,
@@ -121,6 +128,7 @@
 			children = (
 				D19C064E225E9EFF00A3E0AC /* Tap_tapUITests.swift */,
 				D19C0650225E9EFF00A3E0AC /* Info.plist */,
+				D157F7A6227A765900D8E59E /* tap_icon.png */,
 			);
 			path = "Tap tapUITests";
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D157F7A7227A765900D8E59E /* tap_icon.png in Resources */,
 				D19C0639225E9EFE00A3E0AC /* LaunchScreen.storyboard in Resources */,
 				D19C0636225E9EFE00A3E0AC /* Assets.xcassets in Resources */,
 				D19C0634225E9EF200A3E0AC /* Main.storyboard in Resources */,
@@ -239,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D157F7A8227A765900D8E59E /* tap_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D157F7A9227A765900D8E59E /* tap_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +269,7 @@
 			files = (
 				D19C0631225E9EF200A3E0AC /* ViewController.swift in Sources */,
 				D19C062F225E9EF200A3E0AC /* AppDelegate.swift in Sources */,
+				D107EB7022C7F9CA00770585 /* highScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +445,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VJ48F5GVL;
 				INFOPLIST_FILE = "Tap tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project1.tap-tap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugne.taptap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,12 +463,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VJ48F5GVL;
 				INFOPLIST_FILE = "Tap tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project1.tap-tap";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ugne.taptap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

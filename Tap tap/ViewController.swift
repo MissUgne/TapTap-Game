@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var playBttn: UIButton!
     @IBOutlet weak var restartBttn: UIButton!
+    @IBOutlet weak var highScoreBttn: UIButton!
     
     @IBOutlet weak var sunBttn: UIButton!
     @IBOutlet weak var tapsLabel: UILabel!
@@ -35,10 +36,13 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func highScore(_ sender: UIButton) {
+    }
+    
     @IBAction func sunButtonPressed(sender: UIButton!){
         currentTaps = currentTaps + 1
         updateTapsLabel()
-        
+        highScoreView().updateHighScore()
     }
     
     func startTimer(){
@@ -51,6 +55,7 @@ class ViewController: UIViewController {
             logoImg.isHidden = true
             playBttn.isHidden = true
             restartBttn.isHidden = false
+            highScoreBttn.isHidden = true
             
             timerLabel.isHidden = false
             sunBttn.isHidden = false
@@ -58,6 +63,7 @@ class ViewController: UIViewController {
             
             currentTaps = 0
             updateTapsLabel()
+            highScoreView().updateHighScore()
     }
     
     @objc func onTimerFires()
@@ -85,12 +91,14 @@ class ViewController: UIViewController {
 
     func reset(){
         timeLeft = 30
+        highScoreView().updateHighScore()
         
     }
     func restartGame() {
         
         logoImg.isHidden = false
         playBttn.isHidden = false
+        highScoreBttn.isHidden = false
         
         restartBttn.isHidden = true
         timerLabel.isHidden = true
@@ -99,6 +107,7 @@ class ViewController: UIViewController {
         
         timer2?.invalidate()
         reset()
+        
     }
 }
 

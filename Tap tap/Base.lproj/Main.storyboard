@@ -18,77 +18,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="85134" translatesAutoresizingMaskIntoConstraints="NO" id="FLc-wX-dTB">
-                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-uo-1xJ" userLabel="Logo">
+                                <rect key="frame" x="198" y="284.5" width="438" height="166"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1112" id="m7J-vs-bXs"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="834" id="yiS-h0-Z56"/>
+                                    <constraint firstAttribute="width" constant="438" id="pxB-gC-Ivw"/>
+                                    <constraint firstAttribute="height" constant="166" id="qcq-Vy-Vjb"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tap-Tap" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-uo-1xJ" userLabel="Logo">
-                                <rect key="frame" x="20" y="133" width="794" height="176"/>
-                            </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-PB-Iak" userLabel="sun_button">
-                                <rect key="frame" x="342" y="892" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="J40-O7-fcC"/>
-                                    <constraint firstAttribute="height" constant="150" id="P7N-Op-GAu"/>
-                                </constraints>
-                                <state key="normal" image="sun"/>
-                                <connections>
-                                    <action selector="sunButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjG-dr-jIi"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bP-xf-Kyy">
-                                <rect key="frame" x="333.5" y="220" width="167" height="48"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <rect key="frame" x="325" y="458.5" width="184.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="yVE-m7-7gX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="40"/>
                                 <color key="textColor" red="0.98015426288751373" green="1" blue="0.9886077685744078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-UL-nov" userLabel="play_button">
-                                <rect key="frame" x="289" y="925" width="256" height="167"/>
-                                <state key="normal" image="Play"/>
-                                <connections>
-                                    <action selector="playButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUV-45-EWl"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYn-W5-e7h" userLabel="Timer_Label">
-                                <rect key="frame" x="389" y="40" width="56" height="41"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="35"/>
+                                <rect key="frame" x="388.5" y="321.5" width="57.5" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="jRR-TD-pNv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Italic" family="Rockwell" pointSize="35"/>
                                 <color key="textColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-m7-XDV" userLabel="Restart_button">
-                                <rect key="frame" x="330" y="761" width="174" height="53"/>
-                                <state key="normal" image="Restart"/>
+                                <rect key="frame" x="409" y="634.5" width="16" height="22"/>
+                                <state key="normal" image="restart_bttn2"/>
                                 <connections>
                                     <action selector="restartGameBttnPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhO-mA-PGu"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1X0-PB-Iak" userLabel="tap_button">
+                                <rect key="frame" x="320.5" y="688.5" width="193" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199" id="RER-An-hGj"/>
+                                    <constraint firstAttribute="width" constant="193" id="ksV-bF-m6h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" image="tap_bttn2"/>
+                                <connections>
+                                    <action selector="sunButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NjG-dr-jIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-UL-nov" userLabel="play_button">
+                                <rect key="frame" x="409" y="758.5" width="16" height="22"/>
+                                <state key="normal" image="play_bttn2"/>
+                                <connections>
+                                    <action selector="playButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUV-45-EWl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="for-pP-PuK" userLabel="high_score_button">
+                                <rect key="frame" x="394" y="576.5" width="46" height="50"/>
+                                <color key="backgroundColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="highScore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVM-bt-hQn"/>
+                                    <segue destination="PBz-Hb-eid" kind="show" id="BQw-Do-g2b"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.41213205456733704" green="0.78801530599594116" blue="0.8944706916809082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FLc-wX-dTB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3e3-7A-Obd"/>
-                            <constraint firstItem="IYn-W5-e7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ly-Hl-9LC"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Rf2-UL-nov" secondAttribute="bottom" constant="20" id="7HR-BC-zin"/>
-                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BTQ-2Y-GpX"/>
-                            <constraint firstAttribute="trailing" secondItem="FLc-wX-dTB" secondAttribute="trailing" id="Dxm-94-keS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HFe-uo-1xJ" secondAttribute="trailing" constant="20" id="E3q-Bj-qIb"/>
-                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHF-TC-fp1"/>
-                            <constraint firstItem="J0f-m7-XDV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MKI-8Q-wum"/>
-                            <constraint firstItem="FLc-wX-dTB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMf-Zf-a6Z"/>
-                            <constraint firstItem="1X0-PB-Iak" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yhb-mS-N0a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1X0-PB-Iak" secondAttribute="bottom" constant="70" id="aAD-NI-YmT"/>
-                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="dyB-qp-u6x"/>
-                            <constraint firstItem="IYn-W5-e7h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gcw-Z1-RyD"/>
-                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="giq-zK-w35"/>
-                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iCj-qn-6Me"/>
-                            <constraint firstItem="Rf2-UL-nov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nck-aP-2lu"/>
-                            <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="78" id="sRs-f0-TLk"/>
-                            <constraint firstItem="FLc-wX-dTB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wV6-SZ-amk"/>
+                            <constraint firstItem="J0f-m7-XDV" firstAttribute="top" secondItem="1bP-xf-Kyy" secondAttribute="bottom" constant="110" id="2w1-uJ-tKZ"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="IYn-W5-e7h" secondAttribute="bottom" constant="75" id="3fJ-9d-GcR"/>
+                            <constraint firstItem="J0f-m7-XDV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ACE-Nq-mZ7"/>
+                            <constraint firstItem="J0f-m7-XDV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="89.5" id="Elx-NS-IYB"/>
+                            <constraint firstItem="Rf2-UL-nov" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="102" id="KII-hq-JOH"/>
+                            <constraint firstItem="for-pP-PuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MoG-Ix-IJu"/>
+                            <constraint firstItem="J0f-m7-XDV" firstAttribute="top" secondItem="for-pP-PuK" secondAttribute="bottom" constant="8" id="XAS-8F-e7u"/>
+                            <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="32" id="Yy5-PP-7sN"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZCz-vs-83d"/>
+                            <constraint firstItem="for-pP-PuK" firstAttribute="top" secondItem="1bP-xf-Kyy" secondAttribute="bottom" constant="52" id="cbm-5N-L4r"/>
+                            <constraint firstItem="IYn-W5-e7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cnz-Rr-Ssz"/>
+                            <constraint firstItem="HFe-uo-1xJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iW6-2t-BLB"/>
+                            <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="HFe-uo-1xJ" secondAttribute="bottom" constant="8" id="kQz-gX-Hb5"/>
+                            <constraint firstItem="1X0-PB-Iak" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQl-tA-xeT"/>
+                            <constraint firstItem="Rf2-UL-nov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qWm-wy-Di7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="highScoreBttn" destination="for-pP-PuK" id="ZZZ-yS-euX"/>
                         <outlet property="logoImg" destination="HFe-uo-1xJ" id="Bun-64-Zxg"/>
                         <outlet property="playBttn" destination="Rf2-UL-nov" id="bKA-3b-B6L"/>
                         <outlet property="restartBttn" destination="J0f-m7-XDV" id="FwZ-Fs-MS0"/>
@@ -101,12 +112,53 @@
             </objects>
             <point key="canvasLocation" x="46.043165467625904" y="19.964028776978417"/>
         </scene>
+        <!--High Score View-->
+        <scene sceneID="Qhn-ah-B6O">
+            <objects>
+                <viewController id="PBz-Hb-eid" customClass="highScoreView" customModule="Tap_tap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEK-i3-B0r">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-nL-Ta4" userLabel="Highscore">
+                                <rect key="frame" x="371" y="539.5" width="92.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="33"/>
+                                <color key="textColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncr-Dw-XOE">
+                                <rect key="frame" x="383.5" y="410" width="67" height="40"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VE3-Oi-nL0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41213205460000002" green="0.78801530600000003" blue="0.89447069170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerY" secondItem="hEK-i3-B0r" secondAttribute="centerY" id="0H5-ZT-KCu"/>
+                            <constraint firstItem="ncr-Dw-XOE" firstAttribute="centerY" secondItem="hEK-i3-B0r" secondAttribute="centerY" constant="-126" id="GtR-vj-fnd"/>
+                            <constraint firstItem="ncr-Dw-XOE" firstAttribute="centerX" secondItem="hEK-i3-B0r" secondAttribute="centerX" id="aQT-VG-r84"/>
+                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerX" secondItem="hEK-i3-B0r" secondAttribute="centerX" id="gOh-P5-bD0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0iE-xx-uQK"/>
+                    </view>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="wGh-nL-Ta4" id="an3-3b-GFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yfm-Y2-vv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673.38129496402883" y="20.50359712230216"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="85134" width="5000" height="5001"/>
-        <image name="Play" width="256" height="167"/>
-        <image name="Restart" width="174" height="53"/>
-        <image name="Tap-Tap" width="437" height="176"/>
-        <image name="sun" width="1252" height="1319"/>
+        <image name="logo" width="123" height="51"/>
+        <image name="play_bttn2" width="251.5" height="65"/>
+        <image name="restart_bttn2" width="295.5" height="49.5"/>
+        <image name="tap_bttn2" width="153" height="149"/>
     </resources>
 </document>

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "85134.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tap_bttn2.png",
       "scale" : "2x"
     },
     {
