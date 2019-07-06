@@ -10,39 +10,56 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    //Properties
+    let defaults = UserDefaults.standard
+    
     var currentTaps = 0
+    var highscore = 0 
     var timer2: Timer?
     var timeLeft = 30
     
-    
-    //Outlets
     @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var playBttn: UIButton!
     @IBOutlet weak var restartBttn: UIButton!
     @IBOutlet weak var highScoreBttn: UIButton!
+    @IBOutlet weak var highscoreLabel: UILabel!
     
     @IBOutlet weak var sunBttn: UIButton!
     @IBOutlet weak var tapsLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
-    //Actions
+    private enum Keys {
+        static let highscore = "Highscore"
+    }
+    
     func updateTapsLabel(){
         tapsLabel.text = "\(currentTaps) Taps"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if (defaults.value(forKey: Keys.highscore) != nil) {
+            highscore = defaults.value(forKey: Keys.highscore) as? Int ?? 1000
+            highscoreLabel.text = "Highscore: \(highscore)"
+            
+        }
+        
     }
     
     @IBAction func restartGameBttnPressed(){
         restartGame()
     }
     
-    
-    @IBAction func highScore(_ sender: UIButton) {
-    }
-    
     @IBAction func sunButtonPressed(sender: UIButton!){
         currentTaps = currentTaps + 1
         updateTapsLabel()
-        highScoreView().updateHighScore()
+        
+        if (currentTaps > highscore) {
+            highscore = currentTaps
+            highscoreLabel.text = "Highscore: \(highscore)"
+            
+            defaults.set(highscore, forKey: Keys.highscore)
+        }
     }
     
     func startTimer(){
@@ -56,6 +73,7 @@ class ViewController: UIViewController {
             playBttn.isHidden = true
             restartBttn.isHidden = false
             highScoreBttn.isHidden = true
+            highscoreLabel.isHidden = true
             
             timerLabel.isHidden = false
             sunBttn.isHidden = false
@@ -63,7 +81,6 @@ class ViewController: UIViewController {
             
             currentTaps = 0
             updateTapsLabel()
-            highScoreView().updateHighScore()
     }
     
     @objc func onTimerFires()
@@ -79,27 +96,18 @@ class ViewController: UIViewController {
             timerLabel.isHidden = true
         }
     }
-    
-    
-    /* func isGameOver() -> Bool {
-        if currentTaps >= maxTaps {
-            return true
-        }else{
-            return false
-        }
-    }*/
 
     func reset(){
         timeLeft = 30
-        highScoreView().updateHighScore()
-        
     }
+    
     func restartGame() {
         
         logoImg.isHidden = false
         playBttn.isHidden = false
-        highScoreBttn.isHidden = false
+        highscoreLabel.isHidden = false
         
+        highScoreBttn.isHidden = true
         restartBttn.isHidden = true
         timerLabel.isHidden = true
         sunBttn.isHidden = true
@@ -108,6 +116,10 @@ class ViewController: UIViewController {
         timer2?.invalidate()
         reset()
         
+    }
+    
+    func updateHighscore() {
+        defaults.set(highscore, forKey: Keys.highscore)
     }
 }
 

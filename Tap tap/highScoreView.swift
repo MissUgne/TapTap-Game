@@ -6,36 +6,49 @@
 //  Copyright © 2019 Ugne Gliaudelyte. All rights reserved.
 //
 
-import Foundation
+/**import Foundation
 import UIKit
 
 class highScoreView: UIViewController {
     
 @IBOutlet weak var highScoreLabel: UILabel!
+
+ var highscore = ViewController().highscore
+ 
+ func get highscoreStorage() -> UserDefaults {
+    return UserDefaults.standard
+ }
     
-    var score = ViewController().currentTaps
-    var highScore = 0
+ private enum Keys {
+ static let highscore = "Highscore"
+ 
+ }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let HighscoreDefault = UserDefaults.standard
-        
-        if (HighscoreDefault.value(forKey: "Highscore") != nil){
-            highScore = HighscoreDefault.value(forKey: "Highscore") as! Int
-            highScoreLabel.text = String(highScore)
-        }
+ 
+    }
+ 
+ func updateHighscoreLabel() {
+    highscoreLabel.text = "Highscore: \(highscore)"
+ }
+    
+    func setHighScore() {
+        defaults.set(highscore, forKey: Keys.highscore)
         
     }
     
-    func updateHighScore() {
-        if score > highScore {
-            highScoreLabel.text = String(highScore)
+    func getHighscore () {
+    let defaults = highscoreStorage()
+ if (defaults.value(forKey: Keys.highscore) != nil) {
+ highscore = defaults.value(forKey: Keys.highscore) as? Int ?? 1000
+ updateHighscoreLabel()
             
-            let HighscoreDefault = UserDefaults.standard
-            HighscoreDefault.setValue(highScore, forKey: "Highscore")
-            HighscoreDefault.synchronize()
         }
     }
-}
+}**/
+
+
+
+            
+

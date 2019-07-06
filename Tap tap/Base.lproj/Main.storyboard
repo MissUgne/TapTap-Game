@@ -68,7 +68,7 @@
                                     <action selector="playButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUV-45-EWl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="for-pP-PuK" userLabel="high_score_button">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="for-pP-PuK" userLabel="high_score_button">
                                 <rect key="frame" x="394" y="576.5" width="46" height="50"/>
                                 <color key="backgroundColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -77,15 +77,26 @@
                                     <segue destination="PBz-Hb-eid" kind="show" id="BQw-Do-g2b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-nL-Ta4" userLabel="Highscore">
+                                <rect key="frame" x="312.5" y="509.5" width="209" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wGh-nL-Ta4" secondAttribute="height" multiplier="367:58" id="25q-r0-4n2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="33"/>
+                                <color key="textColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.41213205456733704" green="0.78801530599594116" blue="0.8944706916809082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J0f-m7-XDV" firstAttribute="top" secondItem="1bP-xf-Kyy" secondAttribute="bottom" constant="110" id="2w1-uJ-tKZ"/>
                             <constraint firstItem="1bP-xf-Kyy" firstAttribute="top" secondItem="IYn-W5-e7h" secondAttribute="bottom" constant="75" id="3fJ-9d-GcR"/>
+                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4K9-o8-LnB"/>
                             <constraint firstItem="J0f-m7-XDV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ACE-Nq-mZ7"/>
                             <constraint firstItem="J0f-m7-XDV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="89.5" id="Elx-NS-IYB"/>
                             <constraint firstItem="Rf2-UL-nov" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="102" id="KII-hq-JOH"/>
                             <constraint firstItem="for-pP-PuK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MoG-Ix-IJu"/>
+                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="Otn-n1-qlB"/>
                             <constraint firstItem="J0f-m7-XDV" firstAttribute="top" secondItem="for-pP-PuK" secondAttribute="bottom" constant="8" id="XAS-8F-e7u"/>
                             <constraint firstItem="1X0-PB-Iak" firstAttribute="top" secondItem="J0f-m7-XDV" secondAttribute="bottom" constant="32" id="Yy5-PP-7sN"/>
                             <constraint firstItem="1bP-xf-Kyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZCz-vs-83d"/>
@@ -100,6 +111,7 @@
                     </view>
                     <connections>
                         <outlet property="highScoreBttn" destination="for-pP-PuK" id="ZZZ-yS-euX"/>
+                        <outlet property="highscoreLabel" destination="wGh-nL-Ta4" id="XDH-lM-gPj"/>
                         <outlet property="logoImg" destination="HFe-uo-1xJ" id="Bun-64-Zxg"/>
                         <outlet property="playBttn" destination="Rf2-UL-nov" id="bKA-3b-B6L"/>
                         <outlet property="restartBttn" destination="J0f-m7-XDV" id="FwZ-Fs-MS0"/>
@@ -120,12 +132,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-nL-Ta4" userLabel="Highscore">
-                                <rect key="frame" x="371" y="539.5" width="92.5" height="33"/>
-                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="33"/>
-                                <color key="textColor" red="0.98015426289999996" green="1" blue="0.98860776859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncr-Dw-XOE">
                                 <rect key="frame" x="383.5" y="410" width="67" height="40"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="28"/>
@@ -139,10 +145,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.41213205460000002" green="0.78801530600000003" blue="0.89447069170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerY" secondItem="hEK-i3-B0r" secondAttribute="centerY" id="0H5-ZT-KCu"/>
                             <constraint firstItem="ncr-Dw-XOE" firstAttribute="centerY" secondItem="hEK-i3-B0r" secondAttribute="centerY" constant="-126" id="GtR-vj-fnd"/>
                             <constraint firstItem="ncr-Dw-XOE" firstAttribute="centerX" secondItem="hEK-i3-B0r" secondAttribute="centerX" id="aQT-VG-r84"/>
-                            <constraint firstItem="wGh-nL-Ta4" firstAttribute="centerX" secondItem="hEK-i3-B0r" secondAttribute="centerX" id="gOh-P5-bD0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0iE-xx-uQK"/>
                     </view>
