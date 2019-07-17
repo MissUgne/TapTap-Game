@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D107EB7022C7F9CA00770585 /* highScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D107EB6F22C7F9C900770585 /* highScoreView.swift */; };
 		D157F7A7227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
 		D157F7A8227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
 		D157F7A9227A765900D8E59E /* tap_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D157F7A6227A765900D8E59E /* tap_icon.png */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D107EB6F22C7F9C900770585 /* highScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = highScoreView.swift; sourceTree = "<group>"; };
 		D157F7A6227A765900D8E59E /* tap_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tap_icon.png; path = ../../../../tap_icon.png; sourceTree = "<group>"; };
 		D19C062B225E9EF100A3E0AC /* Tap tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19C062E225E9EF200A3E0AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			children = (
 				D19C062E225E9EF200A3E0AC /* AppDelegate.swift */,
 				D19C0630225E9EF200A3E0AC /* ViewController.swift */,
-				D107EB6F22C7F9C900770585 /* highScoreView.swift */,
 				D19C0632225E9EF200A3E0AC /* Main.storyboard */,
 				D19C0635225E9EFE00A3E0AC /* Assets.xcassets */,
 				D19C0637225E9EFE00A3E0AC /* LaunchScreen.storyboard */,
@@ -269,7 +266,6 @@
 			files = (
 				D19C0631225E9EF200A3E0AC /* ViewController.swift in Sources */,
 				D19C062F225E9EF200A3E0AC /* AppDelegate.swift in Sources */,
-				D107EB7022C7F9CA00770585 /* highScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
