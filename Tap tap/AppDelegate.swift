@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Tap tap
+//  com.ugne.taptap
 //
-//  Created by Ugne Gliaudelyte on 4/10/19.
-//  Copyright © 2019 Ugne Gliaudelyte. All rights reserved.
+//  Created by MissUgne on 4/10/19.
+//  Copyright © 2019 MissUgne. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  TapTap Game
+//  com.ugne.taptap
 //
-//  Created by MissUgnne on 4/10/19.
-//  Copyright © 2019 MissUgnne. All rights reserved.
+//  Created by MissUgne on 4/10/19.
+//  Copyright © 2019 MissUgne. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var highscore = 0
     var timer: Timer?
     var timeLeft = 30
+    
     
     
     @IBOutlet weak var logoImg: UIImageView!
@@ -37,13 +38,11 @@ class ViewController: UIViewController {
     }
     
     func updateHighscoreLabel() {
-        highscoreLabel.text = "1st highscore: \(highscore)"
-        
+        highscoreLabel.text = "Highscore: \(highscore)"
         }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getHighscore()
     }
     
@@ -81,20 +80,28 @@ class ViewController: UIViewController {
         
         if (currentTaps > highscore) {
             highscore = currentTaps
-            print("This is highscore: \(highscore)")
             
             updateHighscoreLabel()
             setHighscore()
-            print("Highscore: \(highscore)")
         }
         
         }
-       
-        
-
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
+    }
+    
+    @objc func onTimerFires() {
+        timeLeft -= 1
+        timerLabel.text = "\(timeLeft) s"
+        
+        if timeLeft <= 0 {
+            timer?.invalidate()
+            timer = nil
+            sunBttn.isHidden = true
+            tapsLabel.text = "Your score is \(currentTaps)!"
+            timerLabel.isHidden = true
+        }
     }
     
     @IBAction func playButtonPressed(sender: UIButton!){
@@ -114,26 +121,13 @@ class ViewController: UIViewController {
             updateTapsLabel()
     }
     
-    @objc func onTimerFires()
-    {
-        timeLeft -= 1
-        timerLabel.text = "\(timeLeft) s"
-        
-        if timeLeft <= 0 {
-            timer?.invalidate()
-            timer = nil
-            sunBttn.isHidden = true
-            tapsLabel.text = "Your score is \(currentTaps)!"
-            timerLabel.isHidden = true
-        }
-    }
+  
 
     func reset(){
         timeLeft = 30
     }
     
     func restartGame() {
-        
         logoImg.isHidden = false
         playBttn.isHidden = false
         highscoreLabel.isHidden = true
@@ -153,11 +147,13 @@ class ViewController: UIViewController {
         defaults.set(highscore, forKey: Keys.highscore)
     }
     
+    
     func getHighscore() {
         if (defaults.value(forKey: Keys.highscore) != nil) {
             highscore = defaults.value(forKey: Keys.highscore) as? Int ?? 1000
             updateHighscoreLabel()
+        }
+        
     }
-}
 
 }

@@ -1,9 +1,9 @@
 //
-//  Tap_tapUITests.swift
-//  Tap tapUITests
+//  com.ugne.taptapUITests.swift
+//  com.ugne.taptapUITests
 //
-//  Created by Ugne Gliaudelyte on 4/10/19.
-//  Copyright © 2019 Ugne Gliaudelyte. All rights reserved.
+//  Created by MissUgne on 4/10/19.
+//  Copyright © 2019 MissUgne. All rights reserved.
 //
 
 import XCTest
